@@ -8,3 +8,9 @@ jobs:
       - uses: actions/checkout@v6
       - run: g++ main.cpp -o app
       - run: ./app
+
+      - name: Build tests
+        run: g++ test.cpp -o test
+      
+      - name: Run tests
+        run: ./test
