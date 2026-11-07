@@ -7,4 +7,4 @@ jobs:
     steps:
       - uses: actions/checkout@v6
       - run: g++ test.cpp -o app
-      - run: app
+      - run: ./app
