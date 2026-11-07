@@ -6,12 +6,16 @@ on:
     branches: [main]
 
 jobs:
-  test:
+  cpp-test:
     runs-on: ubuntu-latest
+    defaults:
+      working-directory: ./cpp
     steps:
       - uses: actions/checkout@v6
-      - run: g++ main.cpp -o app
-      - run: ./app
+
+      - name: Cpp main
+        run: g++ main.cpp -o app
+        run: ./app
 
       - name: Build tests
         run: g++ test.cpp -o test
